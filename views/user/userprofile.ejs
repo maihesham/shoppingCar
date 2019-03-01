@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <a class="navbar-brand" href="/">Shopping_car</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item">
+			        <a class="nav-link" href="/"><i class="fas fa-cart-plus"></i>Shopint_car</a>
+			      </li>
+			       <li class="nav-item">
+			         <a class="nav-link" href="/user/userprofile"> <i class="fas fa-users">User Account</a>
+			      </li>
+			       <li class="nav-item">
+					 <a class="nav-link" href="/user/logout">longout</a>
+			      </li>
+			     
+			    </ul>
+			     
+			  </div>
+</nav>
+	
+
+<section class="or">
+	<div class="container">
+		<div class="row">
+		    <div class="col-md-8 col-lg-12  col-md-offset-2">
+		        
+		        <hr>
+		        <h2>My Orders</h2>
+		        <% orders.forEach(function(order){%>
+		            <div class="panel panel-default or">
+		                <div class="panel-body">
+		                    <ul class="list-group">
+		                         <%order.items.forEach(function(th){%>
+		                            <li class="list-group-item ">
+		                                <span class="badge">price <%=th.price%></span>
+		                                title:- <%=th.item.title%> // quantity :- <%=th.qty %> Units
+		                            </li>
+		                        <%});%>  
+		                    </ul>
+		                </div>
+		                <div class="panel-footer">
+		                    <strong>Total Price: $<%= order.cart.totalPrice %></strong>
+		                </div>
+		            </div>
+		         <%});%>
+		    </div>
+		</div>
+		
+	</div>
+</section>
+
+  </body>
+</html>

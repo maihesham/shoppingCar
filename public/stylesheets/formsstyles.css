@@ -1,0 +1,39 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #666;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em; 
+	
+}
+.invalid-feedback{
+   display: initial;
+}
+h2{
+	color: #ea0db0;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+.headd .bg-light{
+      height: 100px;
+      background-color:#d07cba!important;
+      border: 2 solid #d07cba;
+
+}
+.allcontant{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.formstyle{
+	margin-top: 60px;
+}
+.formstyle label{
+	color:#d07cba;
+	font-size: 20px;
+}
+.btn-primary{
+   background-color:#d07cba;
+   border-color: #d07cba;
+   color: black;
+}

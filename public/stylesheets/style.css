@@ -1,0 +1,129 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #666;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em; 
+	
+}
+.or{
+	margin-top: 20px;
+}
+.mes{
+	margin-top: 20px;
+	
+}
+.btn-group, .btn-group-vertical{
+	margin-left: 10px;
+}
+.infocar{
+	margin-top: 50px;
+}
+p{
+	color: #d07cba;
+	min-height: 100px;
+	max-height:100px;
+}
+.badge{
+	margin-left: 8px;
+	background-color: black;
+	border-radius: 100%;
+	padding: 8px;
+	color: white;
+}
+.dropdown-item{
+	  color: #d07cba;
+}
+.dropdown-menu{
+	 background-color:#002347!important;
+      border: 2 solid #d07cba!important;;
+    
+       border-radius: .25rem;
+}
+.card {
+    background-color: #002347;
+    border: 10px solid rgba(0,0,0,.130);
+    border-radius: .25rem;
+    max-height: 550px;
+    min-height: 550px;
+    }
+.card-img-top{
+	max-height: 200px;
+	min-height: 200px;
+}
+h5{
+	color: #FFC0CB;
+}
+.navbar-light .navbar-brand{
+	color: #d07cba;
+	font-size: 50px;
+	font-style: italic;
+	margin: 20px;
+}
+.navbar-light .navbar-brand:hover{
+	color: #d07cba;
+	font-size: 50px;
+	font-style: italic;
+	margin: 20px;
+}
+.navbar-light .navbar-nav .nav-link{
+color: #d07cba;
+	font-size: 20px;
+	font-style: italic;
+	margin: 10px;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+	color: #d07cba;
+	font-size: 20px;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+.navbar-light .navbar-nav .nav-link:active{
+	color: #d07cba;
+	font-size: 20px;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+.navbar-light .navbar-nav .nav-link:visited {
+	color: #d07cba;
+	font-size: 20px;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+.onepr{
+	margin: 30px;
+}
+h2{
+	color: #ea0db0;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+.bg-light{
+      height: 100px;
+      background-color:#002347!important;
+      border: 2 solid #d07cba;
+
+}
+.btn-primary{
+   background-color:#d07cba;
+   border-color: #d07cba;
+   color: black;
+}
+.notak{
+	margin-top: 50px;
+	color: #002347;
+	font-size: 50px;
+	font-style: italic;
+
+}
+.info{
+	margin-top: 50px;
+
+}
+.info p{
+	color: #002347;
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+}

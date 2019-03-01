@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <a class="navbar-brand" href="/">Shopping_car</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			    <%if(login&&session.cart){%>	
+			      <li class="nav-item">
+			        <a class="nav-link" href="/shopping-cart"><i class="fas fa-cart-plus"></i>Shopint_car<span class="badge"><%=session.cart.totalQty%></span></a>
+			        
+			      </li>
+			   <%}%>   
+			      <li class="nav-item dropdown">
+			       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			           <i class="fas fa-users"></i>user  Mangement
+			        </a>
+			        <%if(login){%>
+					        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					          <a class="dropdown-item" href="/user/userprofile">User Account</a>
+					          <a class="dropdown-item" href="/user/logout">longout</a>
+					        
+					        </div>
+				 <%}else{%>
+				 	         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					          <a class="dropdown-item" href="/user/signup">Registration</a>
+					          <a class="dropdown-item" href="/user/signin">Longin</a>
+					        </div>
+				 <%}%>	        
+			      </li>
+			     
+			    </ul>
+			     
+			  </div>
+</nav>
+<%if(noMessages!=true){%>
+<section class="mes">
+	<div class="container">
+		<div class="row">
+		    <div class="col-sm-6 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-offset-3">
+		        <div id="success" class="alert alert-success">
+		            <%=successMsg%>
+		        </div>
+		    </div>
+</div
+	</div>
+</section>
+<%}%>
+<section class="product">
+<div class="container">
+	<div class="row">
+	    <% products.forEach(function(product) { %>
+		<div class="col-sm-3 col-lg-3 onepr">
+			<div class="card" style="width: 18rem;">
+		    <img src="<%= product[0].imagePath %>" class="card-img-top" class="img-responsive">		
+			  <div class="card-body">
+			    <h5 class="card-title"><%= product[0].title %></h5>
+			    <p class="card-text"><%= product[0].description %></p>
+			    <a href="#" class="btn btn-primary">Price <%= product[0].price%>$</a>
+			    <a href="/add-to-cart/<%=product[0]._id%>" class="btn btn-primary">Add_to_car</a>
+			  </div>
+           </div>
+		</div>
+	    <% }) %>	
+		</div>
+	</div>
+</div>
+</section>
+  
+			  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+			   <script src="javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
